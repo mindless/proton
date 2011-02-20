@@ -285,7 +285,7 @@ section.code > div pre, section.code > div ul {
 section.code > div ul {
   padding-top: 30px; }
 section.code > div ul li {
-  background: url(/images/file.png) 0px 3px no-repeat;
+  background: url(../images/file.png) 0px 3px no-repeat;
   padding-left: 23px;
   font-size: 8pt;
   font-weight: bold;
@@ -332,7 +332,7 @@ section.code > div h3 {
   height: 19px;
   letter-spacing: 1px; }
   section.code > div h3.file {
-    background: #883333 url(/images/file.png) 3px 3px no-repeat;
+    background: #883333 url(../images/file.png) 3px 3px no-repeat;
     padding-left: 30px; }
 section.code > div .caption {
   padding: 20px 10px 10px 10px;
