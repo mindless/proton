@@ -48,7 +48,7 @@ a img {
 
 ::-webkit-scrollbar-thumb {
   border-width: 7px 7px 7px 7px;
-  -webkit-border-image: url(/images/scroll-graphite.png) 7 7 7 7 round round; }
+  -webkit-border-image: url(../images/scroll-graphite.png) 7 7 7 7 round round; }
 
 /* Pretty printing styles. Used with prettify.js. */
 .str {
