@@ -159,30 +159,31 @@ extensions if need be.</p>
 </section>
 <section class='code p3 hide' id='layout'>
 <h2>
-Adios, copy-paste.
-<em>Hello, dynamic layouts.</em>
+<em>Adios, copy-paste.</em>
+Hello, dynamic layouts.
 </h2>
 <div>
-<h3>_layouts/default.haml</h3>
-<pre>%html
-  %head
-    %title= page.title
-  %body
-    #container!= yield
+<h3 class='file'>_layouts/default.haml</h3>
+<pre class='prettyprint lang-html'>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;index&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+<div class='highlight'>    &lt;%= yield %&gt;</div>
+  &lt;/body&gt;
+&lt;/html&gt;
 <span class='notch'></span></pre>
 <div class='caption'>
 <h4>Step 1: Define a layout</h4>
-<p>Create a layout in <code>_layouts/default.xxx</code>.<br/>
-it can be in any supported template language.
-ERB and HAML are popular choices.</p>
+<p>Create a layout in <code>_layouts/default.html</code>.</p>
 </div>
 </div>
 <div class='plus'>
 <span>+</span>
 </div>
 <div>
-<h3>index.erb</h3>
-<pre>&lt;h1&gt;Welcome!&lt;/h1&gt;
+<h3 class='file'>index.html</h3>
+<pre class='prettyprint lang-html'>&lt;h1&gt;Welcome!&lt;/h1&gt;
 &lt;p&gt;Feel free to take a look around.&lt;/p&gt;
 <span class='notch'></span></pre>
 <div class='caption'>
@@ -190,23 +191,21 @@ ERB and HAML are popular choices.</p>
 Now your files will all use it.
 </div>
 </div>
-<div class='equals'>
-<span>&rarr;</span>
-</div>
-<div>
-<h3>_output/index.html</h3>
-<pre>&lt;html&gt;
+<br />
+<br />
+<div class='wide'>
+<h3 class='file'>_output/index.html</h3>
+<pre class='prettyprint lang-html'>&lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;index&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;div id='container'&gt;
-      &lt;h1&gt;Welcome!&lt;/h1&gt;
-      &lt;p&gt;Feel free to take a look around.&lt;/p&gt;
+<div class='highlight'>        &lt;h1&gt;Welcome!&lt;/h1&gt;</div>
+<div class='highlight'>        &lt;p&gt;Feel free to take a look around.&lt;/p&gt;</div>
     &lt;/div&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-<span class='notch'></span></pre>
+&lt;/html&gt;</pre>
 <div class='caption'>
 <h4>Gasp in amazement</h4>
 <p>Hyde will automatically put them together for you!</p>
