@@ -22,7 +22,6 @@ Hyde is the cleanest way to create static sites for any occassion.
 <a class='active' href='#premise'>Premise</a>
 <a href='#build'>Build</a>
 <a href='#layout'>Layouts</a>
-<a href='#metadata'>Metadata</a>
 <a href='#partials'>Partials</a>
 <a href='#helpers'>Helpers</a>
 <a href='#install'>Install</a>
@@ -226,54 +225,6 @@ You may even define data in your HTML.</p>
 <h4>Gasp in amazement</h4>
 <p>Hyde will automatically put them together for you!</p>
 </div>
-</div>
-</section>
-<section class='code p4 hide' id='metadata'>
-<h2>More than templates: it stores data.</h2>
-<div>
-<h3>posts/hello_world.textile</h3>
-<pre>date: 2010-10-04
-title: Hello there
-layout: post
----
-
-h3. Hello world!
-
-This is my first post.
-<span class='notch'></span></pre>
-<div class='caption'>
-<p><strong>For any page, you may define metadata before the file begins.</strong>
-This lets you define what layout to use, the page title, or
-any arbitrary data. You may then use these in your code.</p>
-</div>
-</div>
-<div class='plus'>
-<span>+</span>
-</div>
-<div>
-<h3>_layouts/post.haml</h3>
-<pre>%article
-  %h1= page.title
-  %p.date= page.date.strftime('%Y %m %d')
-  .content!= content</pre>
-<div class='caption'>
-<p>In your layouts, you may access the data through
-the <code>page</code> object.</p>
-</div>
-</div>
-<div class='equals'>
-<span>&rarr;</span>
-</div>
-<div>
-<h3>_output/posts/hello_world.html</h3>
-<pre>&lt;article&gt;
-  &lt;h1&gt;Hello there&lt;/h1&gt;
-  &lt;p class='date'&gt;2010/10/04&lt;/p&gt;
-  &lt;div class='content'&gt;
-    &lt;h3&gt;Hello world!&lt;/h3&gt;
-    &lt;p&gt;This is my first post.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</pre>
 </div>
 </section>
 <section class='code p5 hide' id='partials'>
