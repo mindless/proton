@@ -15,164 +15,39 @@
 <p class='brief'>
 Hyde is the cleanest way to create static sites for any occassion.
 </p>
+<p>
+Hyde solves the common problems plaguing
+<br />
+creating sites.
+Here's how:
+</p>
 </header>
-<section class='details'>
-</section>
-<nav class='aspects'>
-<a class='active' href='#premise'>Premise</a>
-<a href='#build'>Build</a>
-<a href='#layout'>Layouts</a>
-<a href='#partials'>Partials</a>
-<a href='#helpers'>Helpers</a>
-<a href='#install'>Install</a>
-</nav>
-<section class='code p1' id='premise'>
+<section class='code p3' id='layout'>
 <h2>
-Code in any language,
-<em>not just HTML...</em>
+<em>Adios, copy-paste.</em>
+<br />
+Hello, dynamic layouts.
 </h2>
+<br />
+<br />
 <div class='list'>
 <ul>
-<li>foo.textile</li>
-<li>index.haml</li>
-<li>css/style.scss</li>
-<li>images/background.png</li>
+<li class='folder'>./</li>
+<li class='l2 folder'>_layouts/</li>
+<li class='l3'>default.html</li>
+<li class='l2'>index.html</li>
+<li class='l2'>about_us.html</li>
 <span class='notch'></span>
 </ul>
 <div class='caption'>
 <h4>Imagine your HTML project looked like this.</h4>
 </div>
 </div>
-<div>
-<h3 class='file'>foo.textile</h3>
-<pre class='prettyprint lang-textile'>h1(hello). Hello from Hyde
-via textile!
-
-Lorem *ipsum* dolor sit amet, 
-consecteteur...
-<span class='notch'></span></pre>
-<div class='caption'>
-<h4>Textile/Markdown support</h4>
-<p>Write articles in simple shorthand with <a href="1">Textile</a> or <a href="2">Markdown</a>.
-This will be magically converted to HTML.</p>
-</div>
-</div>
-<div>
-<h3 class='file'>index.haml</h3>
-<pre class='prettyprint lang-ruby'>%div.article
-  %h1
-    Hello from Hyde via HAML!
-  %p
-    Lorem ipsum dolor sit
-    amet, consecteteur...
-<span class='notch'></span></pre>
-<div class='caption'>
-<h4>Supervalid HTML via HAML</h4>
-<p>Write your HTML in terse, error-resistant <a href="1">HAML</a>.
-HAML lets you generate HTML files from a simpler
-syntax.</p>
-</div>
-</div>
-<div>
-<h3 class='file'>css/style.scss</h3>
-<pre class='prettyprint lang-css'>$red: #833;
-
-.article {
-  h1 { color: $red; }
-  p  { line-height: 1.5; }
-}
-<span class='notch'></span></pre>
-<div class='caption'>
-<h4>Painless CSS</h4>
-<p>You can use variables, nested rules, mixins,
-and other conveniences in your CSS files!
-Powered by <a href="1">Sass CSS</a>.</p>
-</div>
-</div>
-<br />
-<a class='edge' href='#build'>
-<span class='arrow'>&darr;</span>
-<strong>Build it</strong>
-</a>
-</section>
-<section class='code p2 hide' id='build'>
-<h2>...and Hyde will build it for you.</h2>
-<div class='info'>
-<code>$ hyde build</code>
-</div>
-<br />
-<br />
-<br />
-<div class='list'>
-<ul>
-<li>_output/foo.html</li>
-<li>_output/index.html</li>
-<li>_output/css/style.css</li>
-<li>_output/images/background.png</li>
-<span class='notch'></span>
-</ul>
-<div class='caption'>
-<p><strong>After typing <code>hyde build</code>,</strong> Hyde will
-create the output folder for you. Anything
-that's not supported is simply copied over.</p>
-</div>
-</div>
-<div>
-<h3 class='file'>_output/foo.html</h3>
-<pre class='prettyprint lang-html'>&lt;div class='article'&gt;
-  &lt;h1&gt;Hello from Hyde via Textile!&lt;/h1&gt;
-  &lt;p&gt;Lorem &lt;em&gt;ipsum&lt;/em&gt; dolor sit amet, consecteteur...&lt;/p&gt;
-&lt;/div&gt;
-<span class='notch'></span></pre>
-<div class='caption'>
-<p><strong>Hyde automatically guesses file extensions.</strong>
-Textile files, for instance, become <code>.html</code> files...</p>
-</div>
-</div>
-<div>
-<h3 class='file'>_output/css/style.css</h3>
-<pre class='prettyprint lang-css'>.article h1 {
-  color: #833; }
-
-.article p {
-  line-height: 1.5; }
-<span class='notch'></span></pre>
-<div class='caption'>
-<p><strong>...and SCSS files</strong> become <code>.css</code>. You may specify your own
-extensions if need be.</p>
-</div>
-</div>
-<div class='info'>
-<p class='brief'>
-<p><strong>Hyde works by taking a folder with files</strong> in any template format
-(Markdown, HAML, etc), and magically creating the output files
-(HTML, CSS, etc) for you.</p>
-</p>
-<p>Hyde takes this folder of files and crunches them.</p>
-</div>
-<br />
-<a class='edge' href='#build'>
-<span class='arrow'>&darr;</span>
-<strong>Add layouts</strong>
-</a>
-</section>
-<section class='code p3 hide' id='layout'>
-<h2>
-<em>Adios, copy-paste.</em>
-Hello, dynamic layouts.
-</h2>
-<div class='info'>
-<p class='brief'>
-<p><strong>Never repeat yourself again</strong> by creating layouts.
-You can even make these in HAML
-or any supported template language!</p>
-</p>
-</div>
-<div>
+<div class='high'>
 <h3 class='file'>_layouts/default.html</h3>
 <pre class='prettyprint lang-html'>&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;&lt;%= page.title %&gt;&lt;/title&gt;
+    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
 <div class='highlight'>    &lt;%= yield %&gt;</div>
@@ -200,10 +75,14 @@ Now your files will all use it.
 </div>
 </div>
 <div class='info'>
+<h4>
+When adding a mere meta tag to an entire site,
+you just have to edit one file instead of 200.
+</h4>
 <p class='brief'>
-<p><strong>Your HTML files don't have to contain it</strong> and
-Hyde will put them all together for you.
-You may even define data in your HTML.</p>
+<p>Never repeat yourself again by creating layouts.
+You can even make these in HAML
+or any supported template language!</p>
 </p>
 </div>
 <br />
@@ -227,7 +106,252 @@ You may even define data in your HTML.</p>
 </div>
 </div>
 </section>
-<section class='code p5 hide' id='partials'>
+<section class='code' id='how'>
+<h2>
+How it works:
+</h2>
+<p>Some diagram goes here</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</section>
+<section class='code p1' id='premise'>
+<h2>
+Code in any language,
+<em>not just HTML...</em>
+</h2>
+<div class='list'>
+<ul>
+<li class='folder'>./</li>
+<li class='l2'>foo.textile</li>
+<li class='l2'>index.haml</li>
+<li class='l2'>style.scss</li>
+<li class='l2'>background.png</li>
+<span class='notch'></span>
+</ul>
+<div class='caption'>
+<h4>Imagine your HTML project looked like this.</h4>
+</div>
+</div>
+<div>
+<h3 class='file'>foo.textile</h3>
+<pre class='prettyprint lang-textile'>h1(hello). Hello from Hyde
+via textile!
+
+Lorem *ipsum* dolor sit amet, 
+consecteteur...
+<span class='notch'></span></pre>
+<div class='caption'>
+<h4>Textile/Markdown support</h4>
+<p>Write articles in simple shorthand with <a href="http://www.textism.com/tools/textile/">Textile</a> or <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>.
+This will be magically converted to HTML.</p>
+</div>
+</div>
+<div>
+<h3 class='file'>index.haml</h3>
+<pre class='prettyprint lang-ruby'>%div.article
+  %h1
+    Hello from Hyde via HAML!
+  %p
+    Lorem ipsum dolor sit
+    amet, consecteteur...
+<span class='notch'></span></pre>
+<div class='caption'>
+<h4>Supervalid HTML via HAML</h4>
+<p>Write your HTML in terse, error-resistant <a href="http://haml-lang.com">HAML</a>.
+HAML lets you generate HTML files from a simpler
+syntax.</p>
+</div>
+</div>
+<div>
+<h3 class='file'>css/style.scss</h3>
+<pre class='prettyprint lang-css'>$red: #833;
+
+.article {
+  h1 { color: $red; }
+  p  { line-height: 1.5; }
+}
+<span class='notch'></span></pre>
+<div class='caption'>
+<h4>Painless CSS</h4>
+<p>You can use variables, nested rules, mixins,
+and other conveniences in your CSS files!
+Powered by <a href="http://sass-lang.com">Sass CSS</a>.</p>
+</div>
+</div>
+<br />
+<a class='edge' href='#build'>
+<span class='arrow'>&darr;</span>
+<strong>Build it</strong>
+</a>
+</section>
+<section class='code p2' id='build'>
+<h2>...and Hyde will build it for you.</h2>
+<div class='info wide'>
+<code>$ hyde build</code>
+</div>
+<br />
+<br />
+<br />
+<div class='list'>
+<ul>
+<li class='folder'>./</li>
+<li class='l2 new folder'>_output/</li>
+<li class='l3 new'>foo.html</li>
+<li class='l3 new'>index.html</li>
+<li class='l3 new'>style.css</li>
+<li class='l3 new'>background.png</li>
+<li class='l2'>foo.textile</li>
+<li class='l2'>index.haml</li>
+<li class='l2'>style.scss</li>
+<li class='l2'>background.png</li>
+<span class='notch'></span>
+</ul>
+<div class='caption'>
+<p><strong>After typing <code>hyde build</code>,</strong> Hyde will
+create the output folder for you. Anything
+that's not supported is simply copied over.</p>
+</div>
+</div>
+<div>
+<h3 class='file'>_output/foo.html</h3>
+<pre class='prettyprint lang-html'>&lt;div class='article'&gt;
+  &lt;h1&gt;Hello from Hyde via Textile!&lt;/h1&gt;
+  &lt;p&gt;Lorem &lt;em&gt;ipsum&lt;/em&gt; dolor sit amet, consecteteur...&lt;/p&gt;
+&lt;/div&gt;
+<span class='notch'></span></pre>
+<div class='caption'>
+<p><strong>Hyde automatically guesses file extensions.</strong>
+Textile files, for instance, become <code>.html</code> files...</p>
+</div>
+</div>
+<div>
+<h3 class='file'>_output/style.css</h3>
+<pre class='prettyprint lang-css'>.article h1 {
+  color: #833; }
+
+.article p {
+  line-height: 1.5; }
+<span class='notch'></span></pre>
+<div class='caption'>
+<p><strong>...and SCSS files</strong> become <code>.css</code>. You may specify your own
+extensions if need be.</p>
+</div>
+</div>
+<div class='info'>
+<p class='brief'>
+<p><strong>Hyde works by taking a folder with files</strong> in any template format
+(Markdown, HAML, etc), and magically creating the output files
+(HTML, CSS, etc) for you.</p>
+</p>
+<p>Hyde takes this folder of files and crunches them.</p>
+</div>
+<br />
+<div class='wide convert'>
+<div class='brief'>
+<h2>Why this is awesome:</h2>
+</div>
+<h4>Write articles in lightweight markup.</h4>
+<p>
+You may write your pages with the simple markup styles of
+Markdown, and let Hyde take care of converting it to HTML for you.
+It will even apply layouts to it.
+</p>
+<table>
+<tr>
+<td class='from'>
+<ul>
+<li>Textile</li>
+<li>Markdown</li>
+</ul>
+</td>
+<td class='arrow'>&rarr;</td>
+<td class='to'>HTML</td>
+</tr>
+</table>
+<h4>Build templates with templating languages.</h4>
+<p>You can take advantage of the beautiful syntax of HAML
+in your sites.</p>
+<table>
+<tr>
+<td class='from'>
+<ul>
+<li>HAML</li>
+<li>Liquid</li>
+<li>Radius</li>
+<li>ERB</li>
+</ul>
+</td>
+<td class='arrow'>&rarr;</td>
+<td class='to'>HTML</td>
+</tr>
+</table>
+<h4>Supercharge your CSS.</h4>
+<p>Ever wanted to have nested CSS rules? Variables? Mixins?
+Now you can do these with static sites.</p>
+<table>
+<tr>
+<td class='from'>
+<ul>
+<li>Sass</li>
+<li>SCSS</li>
+<li>Less</li>
+</ul>
+</td>
+<td class='arrow'>&rarr;</td>
+<td class='to'>CSS</td>
+</tr>
+</table>
+<p>And finally...</p>
+<h4>Write in plain HTML if you so wish.</h4>
+<p>
+Yes, all these benefits are optional!
+</p>
+</div>
+</section>
+<section class='code' id='why'>
+<h2>
+These are 2 ways Hyde can help you.
+<br />
+<em>There are more.</em>
+</h2>
+<br />
+<br />
+<div class='info'>
+<h4>Partials</h4>
+Lorem upsum dolor sit amet socentoteur adipicising elit. Sed do eiusmod tem
+por incidudunt nma posture magna aliqua.
+<h4>Extensions</h4>
+Lorem upsum dolor sit amet socentoteur adipicising elit. Sed do eiusmod tem
+por incidudunt nma posture magna aliqua.
+</div>
+<div class='info'>
+<h4>Helpers</h4>
+Lorem upsum dolor sit amet socentoteur adipicising elit. Sed do eiusmod tem
+por incidudunt nma posture magna aliqua.
+<h4>World peace</h4>
+Lorem upsum dolor sit amet socentoteur adipicising elit. Sed do eiusmod tem
+por incidudunt nma posture magna aliqua.
+</div>
+</section>
+<section class='code hide' id='partials'>
 <h2>Partials</h2>
 <div>
 <h3 class='file'>index.erb</h3>
@@ -290,7 +414,7 @@ your site.
 &lt;/footer&gt;</pre>
 </div>
 </section>
-<section class='code p7 hide' id='install'>
+<section class='code p7' id='install'>
 <h2>Installation</h2>
 <div class='info'>
 <code>$ gem install hydeweb

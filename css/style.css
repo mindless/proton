@@ -148,10 +148,13 @@ li.L9 {
     color: #060; } }
 
 pre .highlight {
+  background: #fafad0; }
+
+pre div.highlight {
   background: #fafad0;
   display: block;
   margin-bottom: -1.5em;
-  margin-right: -10px;
+  margin-right: -20px;
   margin-left: -10px;
   padding-left: 10px;
   width: 100%; }
@@ -167,6 +170,9 @@ pre::-webkit-scrollbar, ul::-webkit-scrollbar {
 pre::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb {
   border-width: 7px 7px 7px 7px;
   -webkit-border-image: url(../images/scroll-graphite.png) 7 7 7 7 round round; }
+
+.hide {
+  display: none; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "droid sans", sans-serif; }
@@ -259,6 +265,8 @@ section.code > div.info {
   text-align: left; }
   section.code > div.info p.brief {
     font-size: 1.1em; }
+  section.code > div.info h4 {
+    font-size: 1.2em; }
   section.code > div.info code {
     display: block;
     background: #444;
@@ -274,7 +282,7 @@ section.code > div.wide {
   width: 520px; }
 section.code > div.tall pre, section.code > div.tall ul {
   height: 230px; }
-section.code > div pre, section.code > div ul {
+section.code > div pre, section.code > div > ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -307,6 +315,16 @@ section.code > div ul li {
   border-top: solid 1px #ddd; }
   section.code > div ul li:first-child {
     border-top: 0; }
+section.code > div ul li.folder {
+  background-image: url(../images/folder.png); }
+section.code > div li.new {
+  text-shadow: 0 0 5px #a1d1f2; }
+section.code > div ul li.l2 {
+  background-position: 15px 3px;
+  padding-left: 38px; }
+section.code > div ul li.l3 {
+  background-position: 30px 3px;
+  padding-left: 53px; }
 section.code > div .notch {
   width: 30px;
   height: 15px;
@@ -374,13 +392,30 @@ section.code h2 em {
   color: #ccc; }
 
 header {
-  padding: 20px 0; }
-header h1 {
-  text-align: center;
-  font-size: 32pt; }
-header h1 + p {
-  font-size: 18pt;
+  padding: 100px 0 120px 0;
+  color: #333; }
+header {
   text-align: center; }
+header h1, header .brief {
+  display: inline-block; }
+header h1 {
+  font-size: 48pt;
+  color: #333; }
+header .brief {
+  font-size: 18pt;
+  width: 520px;
+  text-align: left;
+  margin: 0 0 0 20px;
+  color: #888;
+  padding: 0;
+  border: 0; }
+header p {
+  margin: 20px auto;
+  width: 680px;
+  display: block;
+  border-top: solid 1px #aaa;
+  font-size: 14pt;
+  padding-top: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
@@ -417,3 +452,75 @@ section.code a.edge {
   font-size: 12pt;
   position: relative;
   top: 190px; }
+
+section.code#layout > div pre {
+  height: 200px; }
+section.code#layout > div.tall pre {
+  height: 230px; }
+section.code#layout .notch {
+  display: none; }
+
+section.code#how {
+  background: #311;
+  padding: 60px 10px; }
+  section.code#how h2 {
+    margin: 0; }
+
+section.code#why {
+  background: #222;
+  padding: 60px 10px; }
+  section.code#why h2 {
+    margin: 0; }
+
+section.code#build div.list ul {
+  height: 280px; }
+section.code#build div.list .notch {
+  top: 279px; }
+section.code#build div.convert {
+  margin-top: -8em; }
+  section.code#build div.convert ul, section.code#build div.convert li {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+  section.code#build div.convert .brief {
+    padding: 40px 40px;
+    margin: 0; }
+  section.code#build div.convert .brief h2, section.code#build div.convert .brief h4 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 18pt; }
+  section.code#build div.convert .brief {
+    background: #666;
+    margin-bottom: 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px; }
+  section.code#build div.convert h4 {
+    text-align: center;
+    padding: 10px 0;
+    border-top: solid 1px #999;
+    margin: 0;
+    font-size: 12pt; }
+  section.code#build div.convert h4 + p {
+    margin-top: -8px;
+    font-size: 1.1em;
+    padding: 0 40px; }
+  section.code#build div.convert table {
+    width: 100%;
+    font-size: 12pt;
+    border-top: solid 1px #999; }
+  section.code#build div.convert td {
+    width: 45%;
+    padding: 20px 10px; }
+  section.code#build div.convert td.from {
+    text-align: right; }
+  section.code#build div.convert td.arrow {
+    width: 10%;
+    text-align: center; }
+  section.code#build div.convert td.to {
+    text-align: left; }
