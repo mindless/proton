@@ -162,11 +162,18 @@ extensions if need be.</p>
 <em>Adios, copy-paste.</em>
 Hello, dynamic layouts.
 </h2>
+<div class='info'>
+<p class='brief'>
+<p><strong>Never repeat yourself again</strong> by creating layouts.
+You can even make these in HAML
+or any supported template language!</p>
+</p>
+</div>
 <div>
-<h3 class='file'>_layouts/default.haml</h3>
+<h3 class='file'>_layouts/default.html</h3>
 <pre class='prettyprint lang-html'>&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;index&lt;/title&gt;
+    &lt;title&gt;&lt;%= page.title %&gt;&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
 <div class='highlight'>    &lt;%= yield %&gt;</div>
@@ -183,26 +190,35 @@ Hello, dynamic layouts.
 </div>
 <div>
 <h3 class='file'>index.html</h3>
-<pre class='prettyprint lang-html'>&lt;h1&gt;Welcome!&lt;/h1&gt;
-&lt;p&gt;Feel free to take a look around.&lt;/p&gt;
+<pre class='prettyprint lang-html'>title: Hello world!
+---
+<div class='highlight'>&lt;h1&gt;Welcome!&lt;/h1&gt;</div>
+<div class='highlight'>&lt;p&gt;This is my page.&lt;/p&gt;</div>
 <span class='notch'></span></pre>
 <div class='caption'>
 <h4>Step 2: Create a page</h4>
 Now your files will all use it.
 </div>
 </div>
+<div class='info'>
+<p class='brief'>
+<p><strong>Your HTML files don't have to contain it</strong> and
+Hyde will put them all together for you.
+You may even define data in your HTML.</p>
+</p>
+</div>
 <br />
 <br />
-<div class='wide'>
+<div class='wide tall'>
 <h3 class='file'>_output/index.html</h3>
 <pre class='prettyprint lang-html'>&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;index&lt;/title&gt;
+    &lt;title&gt;Hello world!&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;div id='container'&gt;
 <div class='highlight'>        &lt;h1&gt;Welcome!&lt;/h1&gt;</div>
-<div class='highlight'>        &lt;p&gt;Feel free to take a look around.&lt;/p&gt;</div>
+<div class='highlight'>        &lt;p&gt;This is my page.&lt;/p&gt;</div>
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
