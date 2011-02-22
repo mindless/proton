@@ -31,7 +31,7 @@ Hello, dynamic layouts.
 <br />
 <br />
 <div class='list'>
-<ul>
+<ul class='files'>
 <li class='folder'>./</li>
 <li class='l2 folder'>_layouts/</li>
 <li class='l3'>default.html</li>
@@ -113,27 +113,42 @@ metadata in your files.</p>
 <h2>
 How it works:
 </h2>
-<p>Some diagram goes here</p>
+<ul class='steps'>
+<li>Take your files</li>
+<li>Type this in a terminal</li>
+<li>Hyde makes a packaged folder for you</li>
+</ul>
 <br />
+<div class='files from'>
+<ul>
+<li class='folder'>_layouts</li>
+<li class='file'>about_us.html</li>
+<li class='file nl'>index.html</li>
+<li class='file'>contact_us.html</li>
+</ul>
+</div>
+<div class='terminal'>
+<code>hyde build</code>
+</div>
+<div class='files output'>
+<ul>
+<li class='folder'>_output</li>
+</ul>
+</div>
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<div class='info'>
+<h4>Clean, no fuzz</h4>
+There is nothing to install in your server.
+Just install Hyde in your local machine.
+It generates normal HTML/CSS files that
+will work anywhere.
+</div>
+<div class='info'>
+<h4>Packed up and good to go!</h4>
+<p>Once you have your output folder, simply
+upload it to a server, send it to your client,
+whatever&mdash;it's ready to work.</p>
+</div>
 </section>
 <section class='code p1' id='premise'>
 <h2>
@@ -141,7 +156,7 @@ Code in any language,
 <em>not just HTML...</em>
 </h2>
 <div class='list'>
-<ul>
+<ul class='files'>
 <li class='folder'>./</li>
 <li class='l2'>foo.textile</li>
 <li class='l2'>index.haml</li>
@@ -214,7 +229,7 @@ Powered by <a href="http://sass-lang.com">Sass CSS</a>.</p>
 <br />
 <br />
 <div class='list'>
-<ul>
+<ul class='files'>
 <li class='folder'>./</li>
 <li class='l2 new folder'>_output/</li>
 <li class='l3 new'>foo.html</li>

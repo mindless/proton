@@ -282,7 +282,7 @@ section.code > div.wide {
   width: 520px; }
 section.code > div.tall pre, section.code > div.tall ul {
   height: 230px; }
-section.code > div pre, section.code > div > ul {
+section.code > div pre, section.code > div > ul.files {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -303,28 +303,28 @@ section.code > div pre, section.code > div > ul {
   border-radius: 4px;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   text-align: left; }
-section.code > div ul {
-  padding-top: 30px; }
-section.code > div ul li {
-  background: url(../images/file.png) 0px 3px no-repeat;
-  padding-left: 23px;
-  font-size: 8pt;
-  font-weight: bold;
-  height: 24px;
-  line-height: 24px;
-  border-top: solid 1px #ddd; }
-  section.code > div ul li:first-child {
-    border-top: 0; }
-section.code > div ul li.folder {
-  background-image: url(../images/folder.png); }
-section.code > div li.new {
-  text-shadow: 0 0 5px #a1d1f2; }
-section.code > div ul li.l2 {
-  background-position: 15px 3px;
-  padding-left: 38px; }
-section.code > div ul li.l3 {
-  background-position: 30px 3px;
-  padding-left: 53px; }
+section.code > div > ul.files {
+  padding-top: 10px; }
+  section.code > div > ul.files li {
+    background: url(../images/file.png) 0px 3px no-repeat;
+    padding-left: 23px;
+    font-size: 8pt;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    border-top: solid 1px #ddd; }
+    section.code > div > ul.files li:first-child {
+      border-top: 0; }
+  section.code > div > ul.files li.folder {
+    background-image: url(../images/folder.png); }
+  section.code > div > ul.files .new {
+    text-shadow: 0 0 5px #a1d1f2; }
+  section.code > div > ul.files li.l2 {
+    background-position: 15px 3px;
+    padding-left: 38px; }
+  section.code > div > ul.files li.l3 {
+    background-position: 30px 3px;
+    padding-left: 53px; }
 section.code > div .notch {
   width: 30px;
   height: 15px;
@@ -461,10 +461,85 @@ section.code#layout .notch {
   display: none; }
 
 section.code#how {
-  background: #311;
+  background: #333;
   padding: 60px 10px; }
   section.code#how h2 {
     margin: 0; }
+  section.code#how div.files {
+    height: 270px;
+    margin-bottom: 2em;
+    width: 400px;
+    background: #eee;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    zoom: 1; }
+    section.code#how div.files:after {
+      content: '';
+      clear: both;
+      display: block;
+      line-height: 0;
+      height: 0;
+      visibility: hidden;
+      zoom: 1; }
+    section.code#how div.files li {
+      float: left;
+      width: 90px;
+      height: 90px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 80px;
+      text-align: center;
+      margin: 20px 20px;
+      color: #333;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+      background: url(../images/file-large.png) center 0 no-repeat; }
+    section.code#how div.files li.folder {
+      background-image: url(../images/folder-large.png); }
+    section.code#how div.files li.nl {
+      clear: left; }
+    section.code#how div.files.from {
+      padding-left: 30px; }
+    section.code#how div.files.output {
+      padding-left: 160px;
+      padding-top: 60px; }
+  section.code#how div.terminal {
+    width: 190px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+    margin: 100px -95px 0 -95px;
+    line-height: 80px;
+    background: #111;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 10px #aaddff, inset 0 0 5px rgba(170, 221, 255, 0.5);
+    -webkit-box-shadow: 0 0 10px #aaddff, inset 0 0 5px rgba(170, 221, 255, 0.5);
+    -o-box-shadow: 0 0 10px #aaddff, inset 0 0 5px rgba(170, 221, 255, 0.5);
+    box-shadow: 0 0 10px #aaddff, inset 0 0 5px rgba(170, 221, 255, 0.5);
+    font-size: 12pt; }
+  section.code#how ul.steps {
+    margin-top: 2em; }
+    section.code#how ul.steps li {
+      display: inline-block;
+      width: 150px;
+      text-align: center;
+      padding: 10px 40px;
+      vertical-align: top; }
 
 section.code#why {
   background: #222;
