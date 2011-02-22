@@ -47,7 +47,9 @@ Hello, dynamic layouts.
 <h3 class='file'>_layouts/default.html</h3>
 <pre class='prettyprint lang-html'>&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;&lt;%= title %&gt;&lt;/title&gt;
+    &lt;title&gt;
+      &lt;%= meta.title %&gt;
+    &lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
 <div class='highlight'>    &lt;%= yield %&gt;</div>
@@ -58,9 +60,6 @@ Hello, dynamic layouts.
 <h4>Step 1: Define a layout</h4>
 <p>Create a layout in <code>_layouts/default.html</code>.</p>
 </div>
-</div>
-<div class='plus'>
-<span>+</span>
 </div>
 <div>
 <h3 class='file'>index.html</h3>
@@ -76,13 +75,14 @@ Now your files will all use it.
 </div>
 <div class='info'>
 <h4>
-When adding a mere meta tag to an entire site,
+When updating an entire site's footer,
 you just have to edit one file instead of 200.
 </h4>
 <p class='brief'>
 <p>Never repeat yourself again by creating layouts.
-You can even make these in HAML
-or any supported template language!</p>
+Just create a layout page, and use the tag
+<strong>&lt;%=&nbsp;yield&nbsp;%&gt;</strong>
+to mark where the content should go.</p>
 </p>
 </div>
 <br />
@@ -101,8 +101,11 @@ or any supported template language!</p>
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 <div class='caption'>
-<h4>Gasp in amazement</h4>
-<p>Hyde will automatically put them together for you!</p>
+<h4>Hyde will automatically put them together for you!</h4>
+<p>Notice how the layout's
+<strong>&lt;%=&nbsp;meta.title&nbsp;%&gt;</strong> tag pulled what's in
+the <strong>title: Hello world!</strong> line. You can define
+metadata in your files.</p>
 </div>
 </div>
 </section>
