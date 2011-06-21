@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Creating extensions</title>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='../style.css' rel='stylesheet' />
+</head>
+<body>
+<div id='top'>
+<a href='../' id='logo'>
+Hyde
+</a>
+</div>
+<div id='area'>
+<div id='content'>
+<div class='c'>
+<div id='crumbs'>
+<a href='../index.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<a href='../extending.html'>Extending Hyde</a>
+<span class='gt'>&rarr;</span>
+<strong>Creating extensions</strong>
+</div>
+<hgroup>
+<h1>Creating extensions</h1>
+</hgroup>
+<div class='content'>
+<p>In your Hyde project's extensions folder (<code>extensions</code> by default), create a file called
+<code>&lt;name&gt;/&lt;name&gt;.rb</code>, where <code>&lt;name&gt;</code> is the name of your extension. This file will automatically loaded.</p>
+
+<p>Example:</p>
+
+<pre><code># extensions/hyde-blog/hyde-blog.rb
+class Hyde
+  # Set up autoload hooks for the other classes
+  prefix = File.dirname(__FILE__)
+  autoload :Blog,   "#{prefix}/lib/blog.rb"
+end
+</code></pre>
+
+</div>
+</div>
+<nav id='nav'>
+<ul>
+<li>
+<a href='/index.html'>
+&larr;
+Hyde
+</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href='/extending.html'>Extending Hyde</a>
+<ul>
+<li>
+<a href='../extending/adding_commands.html'>Adding commands</a>
+</li>
+<li>
+<a class='active' href='../extending/creating_extensions.html'>Creating extensions</a>
+</li>
+<li>
+<a href='../extending/helpers.html'>Helpers</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</body>
+</html>

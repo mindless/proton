@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hyde, the static site builder</title>
+<title>Proton, the static site builder</title>
 <meta charset='UTF-8' />
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
 <meta content='width=device-width, initial-scale=1.0' name='viewport' />
@@ -11,12 +11,12 @@
 <body>
 <div id='all'>
 <header>
-<h1>Hyde</h1>
+<h1>Proton</h1>
 <p class='brief'>
-Hyde is the cleanest way to create static sites for any occassion.
+Proton is the cleanest way to create static sites for any occassion.
 </p>
 <p>
-Hyde solves the common problems plaguing
+Proton solves the common problems plaguing
 <br />
 creating sites.
 Here's how:
@@ -101,7 +101,7 @@ to mark where the content should go.</p>
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 <div class='caption'>
-<h4>Hyde will automatically put them together for you!</h4>
+<h4>Proton will automatically put them together for you!</h4>
 <p>Notice how the layout's
 <strong>&lt;%=&nbsp;meta.title&nbsp;%&gt;</strong> tag pulled what's in
 the <strong>title: Hello world!</strong> line. You can define
@@ -114,9 +114,19 @@ metadata in your files.</p>
 How it works:
 </h2>
 <ul class='steps'>
-<li>Take your files</li>
-<li>Type this in a terminal</li>
-<li>Hyde makes a packaged folder for you</li>
+<li>
+<strong>Install Proton on your machine</strong>
+<br />
+That's right--not on your server!
+</li>
+<li>
+<strong>Then</strong>
+<br />
+Type this in a terminal
+</li>
+<li>
+Proton makes a packaged folder for you
+</li>
 </ul>
 <br />
 <div class='files from'>
@@ -128,7 +138,7 @@ How it works:
 </ul>
 </div>
 <div class='terminal'>
-<code>hyde build</code>
+<code>proton build</code>
 </div>
 <div class='files output'>
 <ul>
@@ -144,7 +154,7 @@ How it works:
 <div class='info'>
 <h4>Clean, no fuzz</h4>
 There is nothing to install in your server.
-Just install Hyde in your local machine.
+Just install Proton in your local machine.
 It generates normal HTML/CSS files that
 will work anywhere.
 </div>
@@ -175,7 +185,7 @@ Code in any language,
 </div>
 <div>
 <h3 class='file'>foo.textile</h3>
-<pre class='prettyprint lang-textile'>h1(hello). Hello from Hyde
+<pre class='prettyprint lang-textile'>h1(hello). Hello from Proton
 via textile!
 
 Lorem *ipsum* dolor sit amet, 
@@ -191,7 +201,7 @@ This will be magically converted to HTML.</p>
 <h3 class='file'>index.haml</h3>
 <pre class='prettyprint lang-ruby'>%div.article
   %h1
-    Hello from Hyde via HAML!
+    Hello from Proton via HAML!
   %p
     Lorem ipsum dolor sit
     amet, consecteteur...
@@ -226,9 +236,9 @@ Powered by <a href="http://sass-lang.com">Sass CSS</a>.</p>
 </a>
 </section>
 <section class='code p2' id='build'>
-<h2>...and Hyde will build it for you.</h2>
+<h2>...and Proton will build it for you.</h2>
 <div class='info wide'>
-<code>$ hyde build</code>
+<code>$ proton build</code>
 </div>
 <br />
 <br />
@@ -248,7 +258,7 @@ Powered by <a href="http://sass-lang.com">Sass CSS</a>.</p>
 <span class='notch'></span>
 </ul>
 <div class='caption'>
-<p><strong>After typing <code>hyde build</code>,</strong> Hyde will
+<p><strong>After typing <code>proton build</code>,</strong> Proton will
 create the output folder for you. Anything
 that's not supported is simply copied over.</p>
 </div>
@@ -256,12 +266,12 @@ that's not supported is simply copied over.</p>
 <div>
 <h3 class='file'>_output/foo.html</h3>
 <pre class='prettyprint lang-html'>&lt;div class='article'&gt;
-  &lt;h1&gt;Hello from Hyde via Textile!&lt;/h1&gt;
+  &lt;h1&gt;Hello from Proton via Textile!&lt;/h1&gt;
   &lt;p&gt;Lorem &lt;em&gt;ipsum&lt;/em&gt; dolor sit amet, consecteteur...&lt;/p&gt;
 &lt;/div&gt;
 <span class='notch'></span></pre>
 <div class='caption'>
-<p><strong>Hyde automatically guesses file extensions.</strong>
+<p><strong>Proton automatically guesses file extensions.</strong>
 Textile files, for instance, become <code>.html</code> files...</p>
 </div>
 </div>
@@ -280,11 +290,11 @@ extensions if need be.</p>
 </div>
 <div class='info'>
 <p class='brief'>
-<p><strong>Hyde works by taking a folder with files</strong> in any template format
+<p><strong>Proton works by taking a folder with files</strong> in any template format
 (Markdown, HAML, etc), and magically creating the output files
 (HTML, CSS, etc) for you.</p>
 </p>
-<p>Hyde takes this folder of files and crunches them.</p>
+<p>Proton takes this folder of files and crunches them.</p>
 </div>
 <br />
 <div class='wide convert'>
@@ -294,7 +304,7 @@ extensions if need be.</p>
 <h4>Write articles in lightweight markup.</h4>
 <p>
 You may write your pages with the simple markup styles of
-Markdown, and let Hyde take care of converting it to HTML for you.
+Markdown, and let Proton take care of converting it to HTML for you.
 It will even apply layouts to it.
 </p>
 <table>
@@ -351,7 +361,7 @@ Yes, all these benefits are optional!
 </section>
 <section class='code' id='why'>
 <h2>
-These are 2 ways Hyde can help you.
+These are 2 ways Proton can help you.
 <br />
 <em>There are more.</em>
 </h2>
@@ -411,13 +421,13 @@ you can use without repeating the code.</p>
 <h2>Helpers</h2>
 <div>
 <h3>_extensions/helpers/helpers.rb</h3>
-<pre class='ruby'> module Hyde::Helpers
+<pre class='ruby'> module Proton::Helpers
    def date_format(date)
      date.strftime('%Y/%m/%d')
    end
  end</pre>
 <div class='caption'>
-Hyde supports extensions where you can add arbitrary functionality
+Proton supports extensions where you can add arbitrary functionality
 to your site. You may define helpers by adding an extension to
 your site.
 </div>
@@ -440,8 +450,8 @@ your site.
 <section class='code p7' id='install'>
 <h2>Installation</h2>
 <div class='info'>
-<code>$ gem install hydeweb
-$ hyde</code>
+<code>$ gem install proton --pre
+$ proton</code>
 </div>
 </section>
 

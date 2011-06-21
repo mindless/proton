@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Template languages</title>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='../style.css' rel='stylesheet' />
+</head>
+<body>
+<div id='top'>
+<a href='../' id='logo'>
+Hyde
+</a>
+</div>
+<div id='area'>
+<div id='content'>
+<div class='c'>
+<div id='crumbs'>
+<a href='../index.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<a href='../introduction.html'>Introduction</a>
+<span class='gt'>&rarr;</span>
+<strong>Template languages</strong>
+</div>
+<hgroup>
+<h1>Template languages</h1>
+</hgroup>
+<div class='content'>
+<p>Hyde comes with support for some common template languages. This means you can
+write your site in a language like Markdown or HAML, and have Hyde take care
+of translating them accordingly.</p>
+
+<p>If a file ends in one of Hyde's supported file extensions (like <code>.haml</code>), it will be stripped
+out and the file will be rendered using the template engine in that extension (in
+this case, HAML).</p>
+
+<h2>Supported languages</h2>
+
+<p>Hyde supports the following languages out-of-the-box:</p>
+
+<ul>
+<li><p>HTML template languages</p>
+
+<ul>
+<li><code>.haml</code> -- HAML</li>
+<li><code>.md</code> -- Markdown</li>
+<li><code>.textile</code> -- Textile</li>
+<li><code>.erb</code> -- ERB (Embedded Ruby)</li>
+</ul>
+</li>
+<li><p>CSS template languages</p>
+
+<ul>
+<li><code>.less</code> -- LessCSS</li>
+<li><code>.sass</code> -- SASS</li>
+</ul>
+</li>
+</ul>
+
+
+<p>This means that the following files will be translated accordingly:</p>
+
+<p> | products.haml       | becomes <code>products.html</code> (rendered through HAML)       |
+ | control.less        | becomes <code>control.css</code> (rendered through Less CSS)     |
+ | site.xml.erb        | becomes <code>site.xml</code> (rendered through Embedded Ruby)   |</p>
+
+<h2>Example</h2>
+
+<p>When creating a new site, have a look at <code>index.haml</code>.</p>
+
+<p>...</p>
+
+<h2>Headers</h2>
+
+<p>...</p>
+
+<h2>Layouts</h2>
+
+<p>Layouts are supported for HAML, Markdown, Textile and ERB languages.</p>
+
+<p>...</p>
+
+<h2>Embedded Ruby features</h2>
+
+<p>Some languages (like HAML and ERB) has support for embedding Ruby code in the
+documents. This will let you do some nifty things in Hyde:</p>
+
+<ul>
+<li>Partials</li>
+<li>Helpers</li>
+</ul>
+
+
+</div>
+</div>
+<nav id='nav'>
+<ul>
+<li>
+<a href='/index.html'>
+&larr;
+Hyde
+</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href='/introduction.html'>Introduction</a>
+<ul>
+<li>
+<a href='../introduction/installation.html'>Installation</a>
+</li>
+<li>
+<a href='../introduction/getting_started.html'>Getting started</a>
+</li>
+<li>
+<a href='../introduction/config.html'>Configuration</a>
+</li>
+<li>
+<a href='../introduction/layouts.html'>Layouts</a>
+</li>
+<li>
+<a href='../introduction/metadata.html'>Metadata</a>
+</li>
+<li>
+<a href='../introduction/partials.html'>Partials</a>
+</li>
+<li>
+<a class='active' href='../introduction/template_languages.html'>Template languages</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</body>
+</html>

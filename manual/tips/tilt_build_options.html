@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Tilt build options</title>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='../style.css' rel='stylesheet' />
+</head>
+<body>
+<div id='top'>
+<a href='../' id='logo'>
+Hyde
+</a>
+</div>
+<div id='area'>
+<div id='content'>
+<div class='c'>
+<div id='crumbs'>
+<a href='../index.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<a href='../tips.html'>Tips</a>
+<span class='gt'>&rarr;</span>
+<strong>Tilt build options</strong>
+</div>
+<hgroup>
+<h1>Tilt build options</h1>
+</hgroup>
+<div class='content'>
+<p>Add these to <code>Protonfile</code>.</p>
+
+<p>Optional options for layout engines.</p>
+
+<pre><code>tilt_options:
+  haml:
+    escape_html: true
+  scss:
+    load_paths: [ 'css' ]
+    style: :compact
+    line_numbers: true
+</code></pre>
+
+<p>To disable CSS compression on the output, add these to your <code>Protonfile</code>:</p>
+
+<pre><code>tilt_build_options:
+  scss:
+    style: :compact
+    line_numbers: false
+</code></pre>
+
+</div>
+</div>
+<nav id='nav'>
+<ul>
+<li>
+<a href='/index.html'>
+&larr;
+Hyde
+</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href='/tips.html'>Tips</a>
+<ul>
+<li>
+<a href='../tips/simple_folder_structure.html'>Simpler folder structure</a>
+</li>
+<li>
+<a href='../tips/subclassing_page.html'>Subclassing Page</a>
+</li>
+<li>
+<a class='active' href='../tips/tilt_build_options.html'>Tilt build options</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</body>
+</html>

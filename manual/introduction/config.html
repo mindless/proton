@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Configuration</title>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='../style.css' rel='stylesheet' />
+</head>
+<body>
+<div id='top'>
+<a href='../' id='logo'>
+Hyde
+</a>
+</div>
+<div id='area'>
+<div id='content'>
+<div class='c'>
+<div id='crumbs'>
+<a href='../index.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<a href='../introduction.html'>Introduction</a>
+<span class='gt'>&rarr;</span>
+<strong>Configuration</strong>
+</div>
+<hgroup>
+<h1>Configuration</h1>
+</hgroup>
+<div class='content'>
+<p>Configuration is done through the file <code>hyde.conf</code> placed in
+your project's root folder. A sample config file is generated
+when doing <code>hyde create</code>.</p>
+
+<p>It is a YAML file, so the basic format of the file is:</p>
+
+<pre><code> option: value
+ # Lines starting with # are comments that are ignored.
+</code></pre>
+
+<h2>Options</h2>
+
+<p>hyde_requirement
+: The minimum version of Hyde needed by the project. Example:</p>
+
+<pre><code>hyde_requirement: 0.0.5
+</code></pre>
+
+<p>site_path
+: The folder where the site's main files are kept. (you can set this to '.')
+  This is the path where your main files are. Example:</p>
+
+<pre><code># myproject/hyde.conf
+site_path: site
+
+# This will instruct hyde to look at myproject/site/ for the
+# files of the project.
+</code></pre>
+
+<p>layouts_path
+: The folder where the layout templates (and partials) are kept. See the
+  {file:Layouts Layouts} section for information on Hyde layouts.</p>
+
+<p>partials_path
+: The folder for partials. See the {file:Partials Partials} section for
+  an overview of what partials are.</p>
+
+<p>extensions_path
+: The folder where the optional extensions are kept. See the
+  {file:ExtendingHyde Extending Hyde} section for more info on extensions.</p>
+
+<p>output_path
+: The folder where the HTML files are to be built when typing <code>hyde build</code>.</p>
+
+<h2>More options</h2>
+
+<p>These options are not in the default <code>hyde.conf</code>, but you may simply
+add them in.</p>
+
+<p>port
+: The port number. Defaults to 4833 unless set. Example:</p>
+
+<pre><code>port: 4999
+</code></pre>
+
+<p>gems
+: This is a list of Ruby gems to be autoloaded into Hyde. Some extensions
+  are available as gems and may simply be added here to be used. Example:</p>
+
+<pre><code>gems:
+  - hyde-rst
+  - hyde-zip
+</code></pre>
+
+<h2>Hidden hyde config file</h2>
+
+<p>Don't like seeing <code>hyde.conf</code> littering up your project folder? Rename
+it to <code>.hyderc</code>.</p>
+
+</div>
+</div>
+<nav id='nav'>
+<ul>
+<li>
+<a href='/index.html'>
+&larr;
+Hyde
+</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href='/introduction.html'>Introduction</a>
+<ul>
+<li>
+<a href='../introduction/installation.html'>Installation</a>
+</li>
+<li>
+<a href='../introduction/getting_started.html'>Getting started</a>
+</li>
+<li>
+<a class='active' href='../introduction/config.html'>Configuration</a>
+</li>
+<li>
+<a href='../introduction/layouts.html'>Layouts</a>
+</li>
+<li>
+<a href='../introduction/metadata.html'>Metadata</a>
+</li>
+<li>
+<a href='../introduction/partials.html'>Partials</a>
+</li>
+<li>
+<a href='../introduction/template_languages.html'>Template languages</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</body>
+</html>

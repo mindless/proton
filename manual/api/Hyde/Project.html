@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hyde::Project</title>
+<meta charset='UTF-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link href='../../style.css' rel='stylesheet' />
+</head>
+<body>
+<div id='top'>
+<a href='../../' id='logo'>
+Hyde
+</a>
+</div>
+<div id='area'>
+<div id='content'>
+<div class='c'>
+<div id='crumbs'>
+<a href='../../index.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<a href='../../api.html'>API reference</a>
+<span class='gt'>&rarr;</span>
+<a href='../../api/Hyde.html'>Hyde</a>
+<span class='gt'>&rarr;</span>
+<strong>Hyde::Project</strong>
+</div>
+<hgroup>
+<p class='type'>Class</p>
+<h1>Hyde::Project</h1>
+</hgroup>
+<div class='content'>
+<p class='brief'>A project.</p>
+<h2>Common usage</h2>
+
+<p>Instanciating:</p>
+
+<pre><code>project = Project.new('~/spur')
+project == Hyde.project          # the last defined project
+</code></pre>
+
+<p>Building:</p>
+
+<pre><code>project.build
+project.build <a href="../file_/puts_/Building/file_.html"> |file| puts "Building #file</a>..." }
+</code></pre>
+
+<p>Getting pages:</p>
+
+<pre><code>Hyde::Page['/index.html']        # ~/spur/index.md; uses Hyde.project
+</code></pre>
+
+<p>Configuration:</p>
+
+<pre><code>project.config_file              # ~/spur/hyde.conf
+project.config                   # Config from above file (OpenStruct)
+project.config.site_path
+</code></pre>
+
+<p>Paths:</p>
+
+<pre><code>project.path(:site)              # ~/spur/site (based on config site_path)
+project.path(:extensions)
+
+project.root('a/b', 'c')         # ~/spur/a/b/c
+</code></pre>
+
+<p>Indexing:</p>
+
+<pre><code>project.pages                    # [&lt;#Page&gt;, &lt;#Page&gt;, ...]
+project.files                    # ['/index.md', '/style.sass', ...]
+                                 # (only site files)
+project.ignored_files
+</code></pre>
+
+<h3>Methods</h3>
+<ul class='section'>
+<li>
+<a href='/api/Hyde/Project/build_.html'>build</a>
+<span class='brief'>Builds.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/config_.html'>config</a>
+<span class='brief'>Returns a Hyde::Config instance.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/config_file_.html'>config_file</a>
+<span class='brief'>Returns the configuration file for the project.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/files_.html'>files</a>
+<span class='brief'>Returns the site files for the project, free from the ignored files.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/ignored_files_.html'>ignored_files</a>
+<span class='brief'>Returns the files to be ignored for the project.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/pages_.html'>pages</a>
+<span class='brief'>Returns the pages for the project.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/path_.html'>path</a>
+<span class='brief'>Returns the path for a certain aspect.</span>
+</li>
+<li>
+<a href='/api/Hyde/Project/root_.html'>root</a>
+<span class='brief'>Returns the root path of the project.</span>
+</li>
+</ul>
+</div>
+</div>
+<nav id='nav'>
+<ul>
+<li>
+<a href='/api/Hyde.html'>
+&larr;
+Hyde
+</a>
+</li>
+</ul>
+<ul>
+<li>
+<a class='active' href='/api/Hyde/Project.html'>Hyde::Project</a>
+<ul>
+<li>
+<a href='../../api/Hyde/Project/build_.html'>build</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/config_.html'>config</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/config_file_.html'>config_file</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/files_.html'>files</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/ignored_files_.html'>ignored_files</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/pages_.html'>pages</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/path_.html'>path</a>
+</li>
+<li>
+<a href='../../api/Hyde/Project/root_.html'>root</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</body>
+</html>
