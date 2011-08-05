@@ -14,7 +14,7 @@ end
 # Add the 'rack-cache' gem if you want to enable caching.
 begin
   require 'rack/cache'
-  use Rack::Cache
+  use Rack::Cache  if ENV['RACK_ENV'] == 'production'
 rescue LoadError
 end
 

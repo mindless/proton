@@ -1,22 +1,16 @@
-desc "Update"
+desc "Update. Make sure to build it there first"
 task :build do
   require 'fileutils'
 
-  # Reset
+  app_path = ENV['PROTON_PATH'] || '../app'
+  proton   = File.expand_path("#{app_path}/bin/proton")
 
   # Build our files
-  system "proton build"
-
-  # Build the manual over there
-  app_path = ENV['PROTON_PATH'] || '../app'
-  Dir.chdir("#{app_path}/manual") do
-    system "proton update"
-    system "proton build"
-  end
+  system "#{proton} build"
 
   # Copy it here (reset first)
   FileUtils.rm_rf "./_public/manual"
-  FileUtils.cp_r "#{app_path}/manual/_output", "./_public/manual"
+  FileUtils.cp_r "#{app_path}/doc", "./_public/manual"
 end
 
 desc "Deploy"
