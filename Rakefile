@@ -1,24 +1,10 @@
-desc "Update. Make sure to build it there first"
+desc "Build"
 task :build do
-  require 'fileutils'
-
-  app_path = ENV['PROTON_PATH'] || '../app'
-  proton   = File.expand_path("#{app_path}/bin/proton")
-
-  # Build our files
-  system "#{proton} build"
-
-  # Copy it here (reset first)
-  FileUtils.rm_rf "./_public/manual"
-  FileUtils.cp_r "#{app_path}/doc", "./_public/manual"
+  system "proton build"
 end
 
 desc "Deploy"
-task :deploy do
-  Dir.chdir("./_public") do
-    system "git add ."
-    system "git add -u ."
-    system "git commit -m ."
-    system "git push origin gh-pages"
-  end
+task :deploy => :build do
+  # github.com/rstacruz/git-update-ghpages
+  system "git update-ghpages rstacruz/proton -b gh-pages -i _public"
 end
