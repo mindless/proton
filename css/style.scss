@@ -291,25 +291,54 @@ section.code#why {
 }
 
 section.code#build {
-  div.list ul { height: 280px; }
+  div.list ul     { height: 280px; }
   div.list .notch { top: 279px; }
 
   div.convert {
-    margin-top: -8em;
+    &      { margin-top: -8em; }
     ul, li { background: transparent; margin: 0; padding: 0; border: 0; }
     
     .brief {
-      & { padding: 40px 40px; margin: 0; }
+      &      { padding: 40px 40px; margin: 0; }
       h2, h4 { border: 0; margin: 0; padding: 0; font-size: 18pt; }
-      & { background: #666; margin-bottom: 20px; @include border-radius(4px); }
+      &      { background: #666; margin-bottom: 20px; @include border-radius(4px); }
     }
 
-    h4 { text-align: center; padding: 10px 0; border-top: solid 1px #999; margin: 0; font-size: 12pt; }
-    h4 + p { margin-top: -8px; font-size: 1.1em; padding: 0 40px; }
-    table { width: 100%; font-size: 12pt; border-top: solid 1px #999; }
-    td { width: 45%; padding: 20px 10px; }
-    td.from { text-align: right; }
+    h4       { text-align: center; padding: 10px 0; border-top: solid 1px #999; margin: 0; font-size: 12pt; }
+    h4 + p   { margin-top: -8px; font-size: 1.1em; padding: 0 40px; }
+    table    { width: 100%; font-size: 12pt; border-top: solid 1px #999; }
+    td       { width: 45%; padding: 20px 10px; }
+    td.from  { text-align: right; }
     td.arrow { width: 10%; text-align: center; }
-    td.to { text-align: left; }
+    td.to    { text-align: left; }
   }
+}
+
+@mixin button {
+  @include border-radius(4px);
+  background:    #833;
+  padding:       5px 10px;
+  border-bottom: 0;
+  font-size:     1.2em;
+  @include box-shadow(1px 1px 0 rgba(black, 0.5));
+
+  &:hover {
+    background: #833 * 1.1; } }
+
+section#install {
+  .rtfm {
+    @include border-radius(4px);
+    background: rgba(black, 0.2);
+    width:      200px;
+    padding:    20px; }
+
+  .rtfm p {
+    font-size: 1.4em;
+    color: #888;
+    margin: 0;
+    padding: 0 0 5px 0; }
+
+  .rtfm a {
+    @include button;
+    margin-top: 10px; }
 }
