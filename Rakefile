@@ -21,7 +21,7 @@ namespace :doc do
   desc "Updates the online manual."
   task :deploy => :update do
     # http://github.com/rstacruz/git-update-ghpages
-    system "git update-ghpages sinefunc/proton -i doc --prefix manual"
+    system "git update-ghpages rstacruz/proton -i doc --prefix manual"
   end
 end
 
