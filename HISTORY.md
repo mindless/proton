@@ -1,3 +1,15 @@
+Proton v0.3.5 - Oct 29, 2011
+-----------------------------
+
+### Fixed:
+  * Remove the hard dependency on RedCloth and maruku. Hopefully fixes #1.
+
+### Misc:
+  * Added `rake test!`.
+  * Added comments in the default 'proton rack' Gemfile about CoffeeScript
+    support.
+  * Update the sinefunc/proton reference to rstacruz/proton.
+
 Proton v0.3.4 - Aug 01, 2011
 ----------------------------
 
