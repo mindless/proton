@@ -1,5 +1,11 @@
+Proton v0.3.6 - Feb 05, 2012
+----------------------------
+
+### Fixed:
+  * Fixed bug where ^C doesn't work.
+
 Proton v0.3.5 - Oct 29, 2011
------------------------------
+----------------------------
 
 ### Fixed:
   * Remove the hard dependency on RedCloth and maruku. Hopefully fixes #1.
