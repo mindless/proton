@@ -79,17 +79,39 @@ class Proton
 end
 
 module Proton::Server
+  extend Proton::CLI::Helpers
   # Available options:
   #   :last_modified  -- timestamp for all files
   def self.options
-    @options ||= Hash.new 
+    @options ||= Hash.new
   end
 
   # :Host, :Port
   def self.run!(options={})
     self.options.merge options
     handler = rack_handler  or return false
-    handler.run self, options
+    handler_name = handler.name.gsub(/.*::/, '')
+    url = "http://#{options[:Host]}:#{options[:Port]}/"
+
+
+    handler.run self, options do |server|
+      puts
+      say_status '==>', "Proton server has now started (via #{handler_name})."
+      say_info "Point your browser to: #{url}"
+      puts
+      [:INT, :TERM].each { |sig| trap(sig) { quit!(server, handler_name) } }
+    end
+
+  rescue Errno::EADDRINUSE => e
+    say_error "Someone is already performing on port #{port}!"
+  end
+
+  def self.quit!(server, handler_name)
+    # Use Thin's hard #stop! if available, otherwise just #stop.
+    server.respond_to?(:stop!) ? server.stop! : server.stop
+    puts
+    say_status '==>', "Exiting..." unless handler_name =~/cgi/i
+    puts
   end
 
   def self.rack_handler
