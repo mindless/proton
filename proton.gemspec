@@ -20,8 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency "haml", "~> 4.0.6"
   s.add_dependency "sass", "~> 3.4.13"
   s.add_dependency "compass", "~> 1.0.1"
+  s.add_dependency "maruku"
 
   s.add_development_dependency "RedCloth"
   s.add_development_dependency "less"
-  s.add_development_dependency "maruku"
+
 end
