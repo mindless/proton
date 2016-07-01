@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency "tilt", "~> 1.3.2"
   s.add_dependency "cuba", "~> 2.0.0"
   s.add_dependency "hashie", "~> 1.0.0"
-  s.add_dependency "haml", "~> 4.0.6"
+  s.add_dependency "hamlit", "~> 2.5.0"
   s.add_dependency "sass", "~> 3.4.13"
   s.add_dependency "compass", "~> 1.0.1"
   s.add_dependency "maruku", "~> 0.7.2"
