@@ -136,7 +136,7 @@ class Project
     specs << config_file
 
     # Ignore the standard files
-    [:layouts, :extensions, :partials, :output, :ignored].each do |aspect|
+    [:layouts, :extensions, :partials, :output].each do |aspect|
       specs << File.join(config.send(:"#{aspect}_path"), '**/*') if path(aspect) && path(aspect) != path(:site)
     end
 
