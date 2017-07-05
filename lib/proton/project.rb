@@ -141,7 +141,7 @@ class Project
     end
 
     # Ignore dotfiles and hyde.conf files by default
-    specs += %w[.* _* *~ README* /config.ru Gemfile Gemfile.lock]
+    specs += %w[.* _* *~ README* /config.ru Gemfile Gemfile.lock _vendor vendor]
     specs += Proton::CONFIG_FILES.map { |s| "/#{s}" }
 
     specs.compact.map { |s| glob(s) }.flatten.uniq
