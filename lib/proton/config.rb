@@ -27,6 +27,7 @@ class Config
     :extensions_path => '_extensions',
     :partials_path => '_layouts',
     :output_path => '_output',
+    :ignored_path => '',
     :tilt_options => {
       :haml => {
         :escape_html => true

@@ -136,12 +136,12 @@ class Project
     specs << config_file
 
     # Ignore the standard files
-    [:layouts, :extensions, :partials, :output].each do |aspect|
+    [:layouts, :extensions, :partials, :output, :ignored].each do |aspect|
       specs << File.join(config.send(:"#{aspect}_path"), '**/*') if path(aspect) && path(aspect) != path(:site)
     end
 
     # Ignore dotfiles and hyde.conf files by default
-    specs += [".*", "_*", "*~ README*", "/config.ru", "Gemfile", "Gemfile.lock", "_vendor", "vendor"]
+    specs += %w[.* _* *~ README* /config.ru Gemfile Gemfile.lock]
     specs += Proton::CONFIG_FILES.map { |s| "/#{s}" }
 
     specs.compact.map { |s| glob(s) }.flatten.uniq

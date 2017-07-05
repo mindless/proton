@@ -1,5 +1,5 @@
 class Proton
-  VERSION = "0.4.1"
+  VERSION = "0.4.2"
 
   # Attribute: version (Proton)
   # Returns the version.
